@@ -84,7 +84,7 @@ public class BookControllerIntergrationTest {
 	void testReplace() throws Exception {
 		Book testBook = new Book(null, "Random", 50,2000);
 		String testBookAsJson = this.mapper.writeValueAsString(testBook);
-		RequestBuilder req = put("/replace/1").contentType(MediaType.APPLICATION_JSON).content(testBookAsJson);
+		RequestBuilder req = put("/replace").contentType(MediaType.APPLICATION_JSON).content(testBookAsJson);
 		
 		Book testCreatedBook = new Book(1,"Random",50,2000);
 		String testCreatedBookAsJSON = this.mapper.writeValueAsString(testCreatedBook);
@@ -98,6 +98,6 @@ public class BookControllerIntergrationTest {
 	
 	@Test
 	void TestRemove() throws Exception {
-		this.mvc.perform(delete("/remove/1")).andExpect(status().isNoContent());
+		this.mvc.perform(delete("/remove")).andExpect(status().isNoContent());
 	}
 }
