@@ -1,5 +1,5 @@
 Coverage: 74%% completed system
-# # BookStoreProjectBackEnd - Presentation Link:
+## BookStoreProjectBackEnd - Presentation Link:
 
 This project required me to create an application that will use a CRUD Functionalty that will allow the user to manage a BookStore.
 
@@ -28,91 +28,71 @@ A JAVA backend application will react with a MySQL Database, HTML, CSS and JAVAS
 Project Management tool Jira was used to plan this project.
 Epics were created to outline what tasks were needed for completion this was based on project specifications outlined by QA Trainers and was completed in a one week sprint.
 
-```
-![image](https://user-images.githubusercontent.com/98025347/157768039-79c91321-292c-4063-924c-ab4599b8eea8.png)
-```
 
-### Prerequisites and Installation
+![image](https://user-images.githubusercontent.com/98025347/157769798-1c247925-7f44-4099-abcc-1ab06256561b.png)
 
-The following programs are needed to be installed to allow further development and testing.
 
-To run this project it is recommended that you install the following programs to see full functionality of codes and relative databases.
 
-```
-- IDE ECLIPSE JAVA - instructions on how to complete installation - https://www.eclipse.org/downloads/packages/installer
-- MAVEN - instructions on how to complete installation - https://o7planning.org/10101/install-maven-for-eclipse
-- MySQL - instructions on how to complete installation - https://www.mysqltutorial.org/install-mysql/
-- jUnit Test - instructions on how to complete installation - https://www.guru99.com/download-installation-junit.html
-```
+### Creation of DataBases
 
-## Running the tests
+H2 and mySQL was used as databases.
 
-To run tests on this application:
+H2 was used as a pseudo database to see if tables were created succesfully.
 
-```
-1. Naviagte to src/test/java 
-2. Right click > Coverage as Junit Test
-```
+
+
+![image](https://user-images.githubusercontent.com/98025347/157770504-aeabbf3c-f56e-4336-9d5d-d1239c849ff0.png)
+
+mySQL was used to create databases and command line interface was navigated to see if tables were created with data input.
+
+![image](https://user-images.githubusercontent.com/98025347/157770728-50ba1501-c86e-4167-8780-b4f25fab3ea4.png)
+
+
+
+
+## SpringBoot JAVA BackEnd Creation
+
+SpringBoot was used as a tool to create a JAVA CRUD function. A class was created for BookController and methods were added for CRUD functionality.
+
+![image](https://user-images.githubusercontent.com/98025347/157772167-c2741e20-87d5-4345-badc-e5303e006931.png)
+
+
 
 ### Unit Tests 
+Junit Testing was used for this project with an overall coverage of 72.6%
 
-The following tests have been created to test the item class, and will test if the coding has been implemented correctly to create an item name, value, delete item and read me functionalities.
-
-```
-public class ItemDAOTest {
-
-	private final ItemDAO DAO = new ItemDAO();
-
-	@Before
-	public void setup() {
-		DBUtils.connect();
-		DBUtils.getInstance().init("src/test/resources/sql-schema.sql", "src/test/resources/sql-data.sql");
-	}
-
-	@Test
-	public void testCreate() {
-		final Item created = new Item(2L, "TV", 123.22);
-		assertEquals(created, DAO.create(created));
-	}
-
-	@Test
-	public void testReadAll() {
-		List<Item> expected = new ArrayList<>();
-		expected.add(new Item(1L, "iWatch", 188.88));
-		assertEquals(expected, DAO.readAll());
-	}
-
-	@Test
-	public void testReadLatest() {
-		assertEquals(new Item(1L, "iWatch", 188.88), DAO.readLatest());
-	}
-
-	@Test
-	public void testRead() {
-		final long ID = 1L;
-		assertEquals(new Item(1L, "iWatch", 188.88), DAO.read(ID));
-	}
-
-	@Test
-	public void testUpdate() {
-		final Item updated = new Item(1L, "iWatch", 288.88);
-		assertEquals(updated, DAO.update(updated));
-	}
-
-	@Test
-	public void testDelete() {
-		assertEquals(1, DAO.delete(1));
-	}
-```
+![image](https://user-images.githubusercontent.com/98025347/157772445-e201b55f-045f-410a-81ee-022ac5c7e9ed.png)
 
 
-## Deployment
+## FrontEnd Creation
 
-This application can be packaged in bytes and into .javac files for full running.
+Visual Studios was used as a program to create the followings files
 
-## Built With
+```                                                                        HTML                                                ```
+						       
+ ![image](https://user-images.githubusercontent.com/98025347/157772796-7dc85e67-5181-4b44-acb7-02ec0fa1bbd6.png)
 
-* [Maven](https://maven.apache.org/) - Dependency Management.
+						       
+						       
+``` JAVASCRIPT ```
+
+![image](https://user-images.githubusercontent.com/98025347/157773081-f9e5cb9b-fb82-427f-a254-fdee3189a354.png)
+
+
+
+
+
+``` CSS ```
+
+![image](https://user-images.githubusercontent.com/98025347/157773108-d9910c6f-3f9a-4216-915b-98201cb3d63e.png)
+
+
+
+
+## WebSite Outcome
+
+![image](https://user-images.githubusercontent.com/98025347/157773267-c4b98420-2b78-49c1-8bf4-a4a8aa566d7d.png)
+
 
 ## Versioning
 
