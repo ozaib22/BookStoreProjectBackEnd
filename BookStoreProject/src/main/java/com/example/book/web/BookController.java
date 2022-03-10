@@ -31,9 +31,9 @@ public BookController(BookService service) {
 
 	
 	@PostMapping("/create")// This will pull the details from the body of the request
+	public ResponseEntity<Book> createbook(@RequestBody Book ref) {
 	
-	public ResponseEntity<Book> createbook(@RequestBody Book A) {
-		Book created = this.service.createbook(A);
+		Book created = this.service.createbook(ref);
 		ResponseEntity<Book> response = new ResponseEntity<Book>(created, HttpStatus.CREATED); // 201 code is created code for HTTP
 		return response;
 	}
@@ -49,9 +49,11 @@ public BookController(BookService service) {
 		return this.service.getbook(Book_id);
 	}
 		
-	@PutMapping("/replace/{Book_id}") 
-	public ResponseEntity<Book> replacebook(@PathVariable Integer Book_id, @RequestBody Book newbook) {
-		Book body = this.service.replacebook(Book_id, newbook);
+	@PutMapping("/replace") 
+	public ResponseEntity<Book> replacebook (@RequestBody Book newbook) {
+		
+		System.out.println("======>");
+		Book body = this.service.replacebook(newbook.getBook_id() , newbook);
 		ResponseEntity<Book> response = new ResponseEntity<Book>(body, HttpStatus.ACCEPTED);
 		return response;
 	}
