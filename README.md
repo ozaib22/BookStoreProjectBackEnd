@@ -1,7 +1,7 @@
 Coverage: 74%% completed system
-## BookStoreProjectBackEnd - Presentation Link:
+## Book Library Project- Presentation Link:
 
-This project required me to create an application that will use a CRUD Functionalty that will allow the user to manage a BookStore.
+This project required me to create an application that will use a CRUD Functionalty that will allow the user to manage a Book Library.
 
 - Project Management Tools - Jira Kanban Board and Github.
 - Databases - mySQL and H2 for testing.
