@@ -56,6 +56,9 @@ SpringBoot was used as a tool to create a JAVA CRUD function. A class was create
 
 ![image](https://user-images.githubusercontent.com/98025347/157772167-c2741e20-87d5-4345-badc-e5303e006931.png)
 
+``` UML ```
+
+![image](https://user-images.githubusercontent.com/98025347/157809848-3629f21b-eeb1-4fb5-8ae3-632d44102796.png)
 
 
 ### Unit Tests 
